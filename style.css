@@ -216,25 +216,50 @@ h3 {
 }
 
 .farm-card {
-  padding: 35px;
-  background: rgba(255,255,255,.55);
+  padding: 36px 32px;
+  background: rgba(255,255,255,.65);
+  border-top: 2px solid var(--green);
 }
 
 .card-number {
   color: var(--brown);
   font-size: .8rem;
-  letter-spacing: .15em;
+  font-weight: 700;
+  letter-spacing: .18em;
+}
+
+.farm-card h3 {
+  font-family: "Shippori Mincho", serif;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin: 12px 0 16px;
+}
+
+.pillar-key {
+  color: var(--brown);
+}
+
+.farm-card p {
+  margin: 0;
+  font-size: .94rem;
+  line-height: 1.85;
 }
 
 .vegetable-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
 }
 
 .vegetable-image {
-  height: 330px;
+  aspect-ratio: 4 / 5;
   background: var(--paper);
+}
+
+.vegetable-card p {
+  margin: 0;
+  font-size: .92rem;
+  line-height: 1.8;
 }
 
 .instagram-section {
@@ -304,6 +329,18 @@ h3 {
   transform: translateY(0);
 }
 
+@media (max-width: 960px) {
+  .farm-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .vegetable-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+}
+
 @media (max-width: 800px) {
   .site-header {
     height: 62px;
@@ -353,7 +390,6 @@ h3 {
   }
 
   .about-grid,
-  .farm-grid,
   .vegetable-grid {
     grid-template-columns: 1fr;
     gap: 35px;
@@ -364,7 +400,7 @@ h3 {
   }
 
   .vegetable-image {
-    height: 300px;
+    aspect-ratio: 4 / 3;
   }
 
   .site-footer {
